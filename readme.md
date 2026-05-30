@@ -1,40 +1,185 @@
-# Bloco de Anotações
+# 📝 Sistema de Anotações
 
-Este é um bloco de anotações simples implementado em HTML, CSS e JavaScript, que permite ao usuário adicionar anotações e salvá-las localmente usando o localStorage do navegador.
+Aplicação web de anotações desenvolvida com **HTML, CSS e JavaScript puro**, focada em simplicidade, organização e armazenamento local.
 
-## Funcionalidades
+O projeto permite criar múltiplas anotações, salvar automaticamente no navegador e recuperar tudo ao recarregar a página — sem necessidade de banco de dados ou backend.
 
-- Adicionar novas anotações: Ao clicar no botão "+" no canto superior direito, um novo bloco de anotações é adicionado.
-- Cada bloco de anotações contém a hora atual e um campo de texto para inserir a anotação.
-- Salvar anotações: Cada bloco de anotações possui um botão "Salvar". Ao clicar no botão, a anotação é salva no localStorage do navegador.
-- Recuperar anotações: Ao recarregar a página, as anotações previamente salvas são recuperadas do localStorage e exibidas nos respectivos campos de texto.
+Ideal para estudos de **JavaScript DOM**, **LocalStorage** e construção de interfaces web responsivas.
 
-## Pré-requisitos
+   ![html](https://img.shields.io/badge/Html-red)
+   ![css](https://img.shields.io/badge/Css-blue)
+   ![css](https://img.shields.io/badge/JavaScript-yellow)
+   ![Platform](https://img.shields.io/badge/platform-Web-lightgrey)
+   ![License](https://img.shields.io/badge/License-MIT-ffffff)
 
-Certifique-se de ter um navegador web atualizado, como Google Chrome, Mozilla Firefox, ou Microsoft Edge.
+<br/>
 
-## Como executar o bloco de anotações
+## ✨ Preview
 
-1. Baixe os arquivos HTML, CSS e JavaScript fornecidos para o seu computador.
-2. Abra o arquivo HTML (index.html) no seu navegador.
-3. O bloco de anotações será exibido na página.
-4. Para adicionar uma nova anotação, clique no botão "+".
-5. Insira a anotação no campo de texto do novo bloco de anotações.
-6. Clique no botão "Salvar" para salvar a anotação no localStorage.
-7. As anotações salvas serão recuperadas automaticamente e preenchidas nos campos de texto quando a página for recarregada.
-   Personalização
-   Se desejar personalizar o estilo do bloco de anotações, você pode modificar o código CSS fornecido (_styles.css_) para atender às suas preferências de design.
+📌 Crie novas anotações rapidamente
+💾 Salve no navegador automaticamente
+🗑️ Exclua quando quiser
+📱 Interface responsiva para desktop e mobile
+🎨 Visual moderno com tema escuro e efeito glassmorphism
 
-## Tecnologias utilizadas
+<br/>
 
-- HTML
-- CSS
-- JavaScript
+## 🚀 Funcionalidades
 
-## Autor
+### ➕ Criar novas anotações
 
-Seu nome
+Clique no botão flutuante **"+"** para criar uma nova anotação.
 
-## Licença
+Cada anotação contém:
 
-Este projeto está licenciado sob a MIT License.
+* título com data/hora
+* campo de texto
+* botão **Salvar**
+* botão **Excluir**
+
+<br/>
+
+### 💾 Armazenamento local
+
+As anotações são salvas usando:
+
+```javascript
+localStorage
+```
+
+Isso significa que:
+
+✅ não precisa de login
+✅ não precisa de servidor
+✅ as anotações permanecem após atualizar a página
+✅ funciona offline
+
+<br/>
+
+### 🗑️ Excluir anotações
+
+Cada card pode ser removido individualmente.
+
+A anotação também é removida do navegador automaticamente.
+
+<br/>
+
+### 📱 Layout responsivo
+
+Interface adaptada para:
+
+* 💻 Desktop
+* 📱 Smartphones
+* 📲 Tablets
+
+Com:
+
+* cards flexíveis
+* botões adaptáveis
+* scrollbar personalizada
+
+<br/>
+
+## 🛠️ Tecnologias utilizadas
+
+* HTML5
+* CSS3
+* JavaScript (Vanilla JS)
+* LocalStorage API
+
+<br/>
+
+## 📂 Estrutura do projeto
+
+```bash
+📁 BlocoDeAnotacao/
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   └── script.js
+│
+├── index.html
+└── README.md
+```
+
+<br/>
+
+## ▶️ Como executar
+
+### 1. Clone o projeto
+
+```bash
+git clone https://github.com/Guilherme-alexander/BlocoDeAnotacao.git
+```
+
+<br/>
+
+### 2. Entre na pasta
+
+```bash
+cd BlocoDeAnotacao
+```
+
+<br/>
+
+### 3. Abra no navegador
+
+Abra:
+
+```bash
+index.html
+```
+
+ou utilize uma extensão como:
+
+* Live Server (VS Code)
+
+<br/>
+
+## 📚 Aprendizados com esse projeto
+
+Esse projeto foi criado para praticar:
+
+* manipulação do DOM
+* criação dinâmica de elementos
+* eventos em JavaScript
+* `addEventListener`
+* `localStorage`
+* organização visual com CSS
+* responsividade
+* estrutura de projetos front-end
+
+<br/>
+
+## 🔮 Melhorias futuras
+
+Ideias para próximas versões:
+
+* [ ] editar título da anotação
+* [ ] busca por palavras
+* [ ] categorias
+* [ ] cores personalizadas por nota
+* [ ] exportar/importar JSON
+* [ ] modo automático de salvar
+* [ ] arrastar e reorganizar cards
+* [ ] contador de caracteres
+
+<br/>
+
+## 👨‍💻 Autor
+
+**Guilherme Alexander**
+
+GitHub: [Guilherme-alexander](https://github.com/Guilherme-alexander)
+
+---
+
+## 📄 Licença
+
+Projeto disponível sob a licença **MIT**.
+
+Sinta-se livre para estudar, modificar e melhorar.
+
+⭐ Se esse projeto te ajudou ou você gostou do código, deixa uma estrela no GitHub.
