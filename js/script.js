@@ -14,12 +14,20 @@ btnAddAnotacao.addEventListener('click', function () {
     anotacaoSingle.classList.add('anotacao-single');
 
     let anotacaoSpan = document.createElement('span');
-    anotacaoSpan.innerText = "Nova Anotação - " + Time;
+    //anotacaoSpan.innerText = "Nova Anotação - " + Time;
+
+    let anotacaoTitle = document.createElement('p');
+    anotacaoTitle.innerText = "Nova Anotação - " + Time;
+    anotacaoTitle.classList.add("title-notion");
 
     let textarea = document.createElement('textarea');
+    textarea.id = "user-textarea";
     textarea.cols = "30";
     textarea.rows = "10";
     textarea.placeholder = "Nova Anotação";
+
+    let anotacaoContentBtn = document.createElement('div');
+    anotacaoContentBtn.classList.add('container-buttons');
 
     let btnSalvar = document.createElement('button');
     btnSalvar.classList.add('btnSalvar');
@@ -29,9 +37,11 @@ btnAddAnotacao.addEventListener('click', function () {
     btnExcluir.classList.add('btnExcluir');
     btnExcluir.innerText = "Excluir";
 
+    anotacaoSpan.appendChild(anotacaoTitle);
     anotacaoSpan.appendChild(textarea);
-    anotacaoSpan.appendChild(btnSalvar);
-    anotacaoSpan.appendChild(btnExcluir);
+    anotacaoSpan.appendChild(anotacaoContentBtn);
+    anotacaoContentBtn.appendChild(btnSalvar);
+    anotacaoContentBtn.appendChild(btnExcluir);
     anotacaoSingle.appendChild(anotacaoSpan);
     containerAnotacao.appendChild(anotacaoSingle);
 
@@ -51,17 +61,28 @@ window.addEventListener('DOMContentLoaded', () => {
         const key = localStorage.key(i);
         if (key.startsWith('anotacao-')) {
             const anotacao = localStorage.getItem(key);
+
             const anotacaoSingle = document.createElement('div');
             anotacaoSingle.classList.add('anotacao-single');
 
             let anotacaoSpan = document.createElement('span');
-            anotacaoSpan.innerText = key.substring(9); // Exclui o prefixo "anotacao-"
+            //anotacaoSpan.innerText = key.substring(9); // Exclui o prefixo "anotacao-"
+
+            let anotacaoTitle = document.createElement('p');
+            anotacaoTitle.innerText = "Nova Anotação - " + Time;
+            anotacaoTitle.classList.add("title-notion");
+
+            anotacaoTitle.innerText = key.substring(9); // Exclui o prefixo "anotacao-"
 
             let textarea = document.createElement('textarea');
+            textarea.id = "user-textarea";
             textarea.cols = "30";
             textarea.rows = "10";
             textarea.placeholder = "Nova Anotação";
             textarea.value = anotacao;
+
+            let anotacaoContentBtn = document.createElement('div');
+            anotacaoContentBtn.classList.add('container-buttons');
 
             let btnSalvar = document.createElement('button');
             btnSalvar.classList.add('btnSalvar');
@@ -71,9 +92,11 @@ window.addEventListener('DOMContentLoaded', () => {
             btnExcluir.classList.add('btnExcluir');
             btnExcluir.innerText = "Excluir";
 
+            anotacaoSpan.appendChild(anotacaoTitle);
             anotacaoSpan.appendChild(textarea);
-            anotacaoSpan.appendChild(btnSalvar);
-            anotacaoSpan.appendChild(btnExcluir);
+            anotacaoSpan.appendChild(anotacaoContentBtn);
+            anotacaoContentBtn.appendChild(btnSalvar);
+            anotacaoContentBtn.appendChild(btnExcluir);
             anotacaoSingle.appendChild(anotacaoSpan);
             containerAnotacao.appendChild(anotacaoSingle);
 
